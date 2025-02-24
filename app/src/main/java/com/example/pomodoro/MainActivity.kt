@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate (savedInstanceState : Bundle ?) {
         super.onCreate(savedInstanceState)
         setContentView (R.layout.activity_main)
-        timerText = findViewById(R.id.textView2)
-        timeInput = findViewById(R.id.textView)
-        startButton = findViewById(R.id.button)
+        timerText = findViewById<TextView>(R.id.textView2)
+        timeInput = findViewById<EditText>(R.id.textView)
+        startButton = findViewById<Button>(R.id.button)
         startButton.setOnClickListener {
             val timeInMinutes = timeInput.text.toString().toIntOrNull()
             if (timeInMinutes != null && timeInMinutes > 0) {
